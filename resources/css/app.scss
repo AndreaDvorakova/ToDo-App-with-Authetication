@@ -1,0 +1,11 @@
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
