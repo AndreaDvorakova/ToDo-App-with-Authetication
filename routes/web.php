@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ListController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
@@ -25,3 +26,8 @@ Route::post('/register', [RegistrationController::class, 'store'])->name('regist
 Route::get('/login', [SessionController::class, 'create'])->name('session.create');
 Route::post('/login', [SessionController::class, 'store'])->name('session.store');
 Route::get('/logout', [SessionController::class, 'destroy'])->name('session.destroy');
+
+Route::get('/tasks', [ListController::class, 'show'])->name('task.show');
+Route::post('/tasks', [ListController::class, 'store'])->name('task.store');
+Route::put('/tasks/{id}', [ListController::class, 'edit'])->name('task.edit');
+Route::delete('/tasks/{id}', [ListController::class, 'delete'])->name('task.delete');

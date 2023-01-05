@@ -2,8 +2,8 @@
 
 @section('content')
     
-    <h2>Register</h2>
-    <form method="POST" action="/register">
+    <h2 class="text-center mt-5">Register</h2>
+    <form  class="d-flex-col justify-content-center mt-5" method="POST" action="/register">
         {{ csrf_field() }}
         <div class="form-group">
             <label for="name">Name:</label>
@@ -20,8 +20,8 @@
             <input type="password" class="form-control" id="password" name="password">
         </div>
 
-        <div class="form-group">
-            <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
+        <div class="form-group text-center mt-5">
+            <button style="cursor:pointer" type="submit" class="btn btn-outline-primary btn-block mt-5">Submit</button>
         </div>
         {{-- @include('partials.formerrors') --}}
     </form>

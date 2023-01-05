@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <h2>Log In</h2>
+    <h2 class="text-center mt-5">Log In</h2>
     
-    <form method="POST" action="/login">
+    <form class="d-flex-col justify-content-center mt-5" method="POST" action="/login">
         @csrf
 
         <div class="form-group">
@@ -17,8 +17,8 @@
             <input type="password" class="form-control" id="password" name="password">
         </div>
 
-        <div class="form-group">
-            <button style="cursor:pointer" type="submit" class="btn btn-primary">Login</button>
+        <div class="form-group text-center mt-5">
+            <button style="cursor:pointer" type="submit" class="btn btn-outline-primary btn-block mt-5">Login</button>
         </div>
         {{-- @include('partials.formerrors') --}}
     </form>

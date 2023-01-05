@@ -9,7 +9,18 @@
     
 
 </head>
-<body>
-    @yield('content')
+<body >
+    <nav class="col-12 d-flex justify-content-end p-4 bg-dark">
+        @if (auth()->check()) 
+                    <a href="/logout"><button class="btn btn-outline-primary mr-3">Logout</button></a>
+                    <a href="/tasks"><button class="btn btn-outline-secondary">Tasks</button></a>
+                @else
+                <a href="/login"><button class="btn btn-outline-primary mr-3">Login</button></a>
+                <a href="/register"><button class="btn btn-outline-secondary">Register</button></a>
+        @endif
+    </nav>
+    <main class="col-6 mx-auto">
+        @yield('content')
+    </main>
 </body>
 </html>

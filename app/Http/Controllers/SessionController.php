@@ -19,7 +19,7 @@ class SessionController extends Controller
             ]);
         }
         
-        return redirect()->to('/');
+        return redirect()->to('/tasks');
     }
     
     public function destroy()
